@@ -20,9 +20,8 @@ function PageTurner(options) {
 
   var defaults = {
     "animate": "",
-    "currentPage": $('body'),
-    "itemClass": 'student-item',
-    "itemList": $('.student-list'),
+    "currentPage": 'body',
+    "itemClass": 'page-item',
     "itemsOnPage": 10,
     "paginationClass": 'pagination',
     "paginationElement": 'div',
@@ -60,7 +59,7 @@ function PageTurner(options) {
  */
 PageTurner.prototype.render = function() {
   var pagination = this.createPage(0, this.host.itemClass);
-  this.host.currentPage.append(pagination);
+  $(this.host.currentPage).append(pagination);
 };
 
 /**
