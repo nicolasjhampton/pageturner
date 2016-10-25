@@ -1,3 +1,3 @@
 "use strict";
 
-module.exports.PageTurner = require("./pageturner.js");
+exports.PageTurner = require("./pageturner.js");

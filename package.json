@@ -2,7 +2,7 @@
   "name": "pageturner",
   "version": "1.0.0",
   "description": "npm package to create automatic pagination out of a list of repeating elements on an html page",
-  "main": "pageturner.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
@@ -13,7 +13,19 @@
     "jquery",
     "plugin"
   ],
-  "author": "Nicolas James Hampton",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicolasjhampton/pageturner.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/nicolasjhampton/pageturner/issues",
+    "email" : "nicolasjhampton@gmail.com"
+  },
+  "homepage": "https://github.com/nicolasjhampton/pageturner",
+  "author": {
+    "name": "Nicolas James Hampton",
+    "email": "nicolasjhampton@gmail.com"
+  },
   "license": "MIT",
   "dependencies": {
     "jquery": "^3.1.1"
