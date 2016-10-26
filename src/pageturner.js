@@ -1,5 +1,9 @@
 'use strict';
 
+if(typeof __webpack_require__ != "undefined" || typeof module == "object") {
+  var $ = require('jquery');
+}
+
 /**
  * PageTurner
  * @summary Creates pages out of identical html items with built in search
@@ -7,8 +11,6 @@
  * @copyright Nicolas James Hampton 2016
  * @license MIT
  */
-
-var $ = (typeof module == "undefined") ? $ : require('jquery');
 
 /**
  * Configures the settings for the PageTurner instance
@@ -178,7 +180,6 @@ PageTurner.prototype.createPageLink = function(pageIndex, navObj) {
   return pageLink;
 };
 
-
-(typeof module == "undefined")
-? window.PageTurner = PageTurner:
-  module.exports = PageTurner;
+if(typeof __webpack_require__ != "undefined" || typeof module == "object") {
+  module.exports = window.PageTurner = PageTurner;
+}

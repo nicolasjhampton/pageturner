@@ -16,7 +16,7 @@ describe("PageTurner", function() {
   before(function(done) {
     document.body.innerHTML = html;
     $ = require('jquery');
-    var PageTurner = require('../pageturner.js');
+    var PageTurner = require('../src');
     pageTurner = new PageTurner();
     done();
   });
@@ -45,7 +45,7 @@ describe("PageTurner", function() {
       // Act
       var navObj = pageTurner.displayPage(1, pageTurner.host.itemClass);
       // Assert
-      expect(navObj.entries).to.deep.equal($('.student-item'));
+      expect(navObj.entries).to.deep.equal($('.page-item'));
     });
 
     it("should have the current page index in the object returned", function() {
@@ -58,7 +58,7 @@ describe("PageTurner", function() {
     it("should show the correct amount of items", function() {
       // Act
       var navObj = pageTurner.displayPage(3, pageTurner.host.itemClass);
-      var visible = $('.student-item').filter((index, element) => {
+      var visible = $('.page-item').filter((index, element) => {
         return element.style.display != 'none';
       });
       // Assert
@@ -68,7 +68,7 @@ describe("PageTurner", function() {
     it("should show the correct first item", function() {
       // Act
       var navObj = pageTurner.displayPage(3, pageTurner.host.itemClass);
-      var visible = $('.student-item').filter((index, element) => {
+      var visible = $('.page-item').filter((index, element) => {
         return element.style.display != 'none';
       });
       // Assert
@@ -78,7 +78,7 @@ describe("PageTurner", function() {
     it("should show the correct last item", function() {
       // Act
       var navObj = pageTurner.displayPage(3, pageTurner.host.itemClass);
-      var visible = $('.student-item').filter((index, element) => {
+      var visible = $('.page-item').filter((index, element) => {
         return element.style.display != 'none';
       });
       // Assert
